@@ -7,7 +7,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
     const token = req.cookies.token
 
     if(!token){
-        return res.status(401).json({ message: 'Unauthorized'});
+        return res.status(401).json({ status: false,  message: 'Unauthorized'});
     }
 
     try{
@@ -16,6 +16,6 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
         next();
 
     }catch(error){
-        return res.status(401).json({ message: 'Unauthorized' });
+        return res.status(401).json({ status: false, message: 'Unauthorized' });
     }
 };

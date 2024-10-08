@@ -4,7 +4,7 @@ export const API ={
 }
 
 export const nodemailerConfig = {
-    email: "dramosm21@curnvirtual.edu.co",
+    email: "ingrese un email",
     password: "hhin ncrb vlir ugcd",
     service: "gmail"
 }

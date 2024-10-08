@@ -7,12 +7,19 @@ import userRoutes from './routes/user.routes';
 import cookieParser from 'cookie-parser';
 import { API } from './config/config';
 // import chatRoutes from './routes/chatRoutes';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:4200',
+    credentials: true,
+}));
 app.use(cookieParser());
 app.use(express.json());
+
 
 // Conectar a la base de datos
 // connectDB();
@@ -25,7 +32,6 @@ app.get(`${API.baseURL}`, (_req, res)=>{
 })
 // app.use('/api/chat', chatRoutes);
 
-// Middleware de manejo de errores
 // app.use(errorHandler);
 
 export default app;

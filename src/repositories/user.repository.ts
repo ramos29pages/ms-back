@@ -1,3 +1,4 @@
+// import { getAllUsers } from './../controllers/user.controller';
 // user.repository.ts
 import { pool } from '../config/db.config';
 import User from '../models/user';

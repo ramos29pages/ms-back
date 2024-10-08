@@ -6,5 +6,4 @@ export const query = async (sql: string, values?: any[]) => {
   return results;
 };
 
-// Ejemplo de uso:
 // const users = await query('SELECT * FROM users');

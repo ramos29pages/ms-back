@@ -28,7 +28,7 @@ class ResetPasswordService {
       },
     });
 
-    // Configurar el correo electrónico
+    // Configura el correo electrónico
     const mailOptions = {
       from: nodemailerConfig.email,
       to: email,
